@@ -1,0 +1,74 @@
+# Gestión de Créditos - Examen 📊
+
+Este proyecto es una aplicación web desarrollada con **Python (Flask) y SQLite** para gestionar créditos.  
+Incluye un **backend con Flask**, un **frontend en HTML, CSS y JavaScript**, y una **gráfica con Chart.js** para visualizar los créditos otorgados.
+
+---
+
+## **1. Tecnologías utilizadas**
+- **Flask** (Framework para el backend y API)
+- **SQLite** (Base de datos ligera)
+- **Bootstrap** (Para una interfaz moderna y responsiva)
+- **Chart.js** (Para la gráfica de créditos otorgados)
+- **Axios** (Para hacer peticiones a la API desde el frontend)
+
+---
+
+## **2. Instalación y ejecución del proyecto**
+Para ejecutar la aplicación en tu computadora, sigue estos pasos:
+
+### **1 Clonar el repositorio**
+```bash
+git clone https://github.com/Paco1702/Examen_CreditosApp.git
+cd Examen_CreditosApp
+
+### **2 Instalar las dependencias del backend**
+```bash
+cd backend
+pip install -r requirements.txt
+
+### **3 Ejecutar el backend con Flask**
+```bash
+python app.py
+
+### **4 Abrir el frontend (opcional)**
+Si al ejecutar el Flask y no abre utilizando http://127.0.0.1:5000
+Ve a la carpeta frontend y abre el archivo.index.html
+```bash
+
+http://127.0.0.1:5000/creditos
+
+## **3. Uso de la API**
+Se puede utilizar Postman asegurandose que el servidor Flask se está ejecutando
+
+### **Base URL: http://127.0.0.1:5000**
+
+### **GET**
+Base URL: http://127.0.0.1:5000/creditos
+
+### **POST**
+Base URL: http://127.0.0.1:5000/creditos
+```json
+{
+  "cliente": "Ana Gómez",
+  "monto": 8000,
+  "tasa_interes": 2.8,
+  "plazo": 36,
+  "fecha_otorgamiento": "2025-04-15"
+}
+
+## **PUT**
+Actualizar credito con ID 1: http://127.0.0.1:5000/creditos/1
+```json
+{
+  "monto": 10000,
+  "tasa_interes": 3.0
+}
+
+## **DELETE**
+Eliminar credito con ID 1: http://127.0.0.1:5000/creditos/1
+
+4. Implementación de la Gráfica
+La aplicación usa Chart.js para mostrar una gráfica de los créditos otorgados.
+El gráfico se carga al hacer clic en el botón "Ver Gráfico".
+Se actualiza dinámicamente con los datos de la API.
